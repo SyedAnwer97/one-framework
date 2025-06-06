@@ -45,7 +45,6 @@ Thumbs.db
 
 # Environment / config files
 .env
-*.properties
 
 # Temporary files
 *.tmp
