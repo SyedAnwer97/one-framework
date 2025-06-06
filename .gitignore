@@ -1,38 +1,64 @@
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# ======================================
+# Java, IntelliJ IDEA, Eclipse, Maven
+# ======================================
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
+# IntelliJ IDEA
+.idea/
 *.iml
-*.ipr
+*.iws
+out/
 
-### Eclipse ###
-.apt_generated
-.classpath
-.factorypath
+# Eclipse
 .project
-.settings
-.springBeans
-.sts4-cache
+.classpath
+.settings/
+.loadpath
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
+# Maven
+target/
+dependency-reduced-pom.xml
+release.properties
+buildNumber.properties
+.mvn/timing.properties
 
-### VS Code ###
+# Logs
+*.log
+logs/
+
+# Extent Reports (adjust folder if different)
+test-output/
+extent-reports/
+*.html
+*.json
+*.xml
+
+# Appium
+*.apk
+*.ipa
+
+# Java
+*.class
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Environment / config files
+.env
+*.properties
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Coverage reports
+coverage/
+jacoco.exec
+
+# VSCode (optional)
 .vscode/
 
-### Mac OS ###
-.DS_Store
+# Others (optional)
+*.bak
+*.orig
