@@ -5,18 +5,25 @@ import com.framework.driver.managers.web.local.FireFoxManager;
 import com.framework.enums.BrowserType;
 import org.openqa.selenium.WebDriver;
 
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.function.Supplier;
+
 public final class LocalDriverFactory {
 
     private LocalDriverFactory() {
     }
 
-    public static WebDriver getDriver(BrowserType browserType) {
-        return isBrowserChrome(browserType)
-                ? ChromeManager.getDriver()
-                : FireFoxManager.getDriver();
+    private static final Map<BrowserType, Supplier<WebDriver>> MAP =
+            new EnumMap<>(BrowserType.class);
+
+    static {
+        MAP.put(BrowserType.CHROME, ChromeManager::getDriver);
+        MAP.put(BrowserType.FIREFOX, FireFoxManager::getDriver);
     }
 
-    private static boolean isBrowserChrome(BrowserType browserType) {
-        return browserType == BrowserType.CHROME;
+    public static WebDriver getDriver(BrowserType browserType) {
+        return MAP.get(browserType).get();
     }
+
 }
