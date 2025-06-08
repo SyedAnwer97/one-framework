@@ -37,4 +37,16 @@ public interface FrameworkConfig extends Config {
 
     @ConverterClass(StringToURLConverter.class)
     URL selenoidURL();
+
+    @ConverterClass(StringToURLConverter.class)
+    @DefaultValue("http://127.0.0.1:4723")
+    URL LocalAppiumServerURL();
+
+    @Key("mobileRemoteMode")
+    @ConverterClass(StringToBrowserRemoteModeTypeConverter.class)
+    BrowserRemoteModeType mobileRemoteMode();
+
+    @Key("runModeMobile")
+    @ConverterClass(StringToRunModeBrowserTypeConverter.class)
+    RunModeBrowserType runModeMobile();
 }
