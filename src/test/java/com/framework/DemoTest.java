@@ -1,13 +1,13 @@
 package com.framework;
 
-import lombok.SneakyThrows;
+import com.framework.config.factory.BrowserStackConfigFactory;
 import org.testng.annotations.Test;
 
-public class DemoTest extends WebBase{
+public class DemoTest extends WebBase {
 
-    @SneakyThrows
+
     @Test
     public void loginTest() {
-        Thread.sleep(3000);
+        System.out.println(BrowserStackConfigFactory.getConfig().browserStackURL());
     }
 }
