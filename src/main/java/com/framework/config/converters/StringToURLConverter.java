@@ -1,4 +1,4 @@
-package com.framework.converters;
+package com.framework.config.converters;
 
 import org.aeonbits.owner.Converter;
 

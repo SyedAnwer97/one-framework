@@ -1,12 +1,13 @@
 package com.framework.config;
 
-import com.framework.converters.StringToBrowserConverter;
-import com.framework.converters.StringToBrowserRemoteModeTypeConverter;
-import com.framework.converters.StringToRunModeBrowserTypeConverter;
-import com.framework.converters.StringToURLConverter;
+import com.framework.config.converters.StringToBrowserConverter;
+import com.framework.config.converters.StringToBrowserRemoteModeTypeConverter;
+import com.framework.config.converters.StringToRunModeBrowserTypeConverter;
+import com.framework.config.converters.StringToURLConverter;
 import com.framework.enums.BrowserRemoteModeType;
 import com.framework.enums.BrowserType;
-import com.framework.enums.RunModeBrowserType;
+import com.framework.enums.MobileRemoteModeType;
+import com.framework.enums.RunModeType;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;
@@ -26,7 +27,7 @@ public interface FrameworkConfig extends Config {
 
     @Key("runModeBrowser")
     @ConverterClass(StringToRunModeBrowserTypeConverter.class)
-    RunModeBrowserType browserRunMode();
+    RunModeType browserRunMode();
 
     @Key("browserRemoteMode")
     @ConverterClass(StringToBrowserRemoteModeTypeConverter.class)
@@ -44,9 +45,9 @@ public interface FrameworkConfig extends Config {
 
     @Key("mobileRemoteMode")
     @ConverterClass(StringToBrowserRemoteModeTypeConverter.class)
-    BrowserRemoteModeType mobileRemoteMode();
+    MobileRemoteModeType mobileRemoteMode();
 
     @Key("runModeMobile")
     @ConverterClass(StringToRunModeBrowserTypeConverter.class)
-    RunModeBrowserType runModeMobile();
+    RunModeType runModeMobile();
 }
