@@ -1,4 +1,4 @@
-package com.framework.converters;
+package com.framework.config.converters;
 
 import com.framework.enums.BrowserRemoteModeType;
 import org.aeonbits.owner.Converter;

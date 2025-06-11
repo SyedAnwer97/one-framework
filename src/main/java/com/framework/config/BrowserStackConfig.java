@@ -1,6 +1,6 @@
 package com.framework.config;
 
-import com.framework.converters.StringToURLConverter;
+import com.framework.config.converters.StringToURLConverter;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;

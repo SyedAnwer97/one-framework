@@ -1,4 +1,4 @@
-package com.framework.driver.web.local;
+package com.framework.driver.factory.web.local;
 
 import com.framework.driver.managers.web.local.ChromeManager;
 import com.framework.driver.managers.web.local.FireFoxManager;

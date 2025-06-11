@@ -1,4 +1,4 @@
-package com.framework.driver.web.remote;
+package com.framework.driver.factory.web.remote;
 
 import com.framework.driver.managers.web.remote.selenoid.SelenoidChromeManager;
 import com.framework.driver.managers.web.remote.selenoid.SelenoidFirefoxManager;
