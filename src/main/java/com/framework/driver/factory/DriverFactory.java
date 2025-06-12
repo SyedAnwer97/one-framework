@@ -17,7 +17,7 @@ public final class DriverFactory {
 
     static {
         WEB.put(RunModeType.LOCAL, LocalWebDriverImpl::new);
-        WEB.put(RunModeType.REMOTE, LocalWebDriverImpl::new);
+        WEB.put(RunModeType.REMOTE, RemoteWebDriverImpl::new);
         MOBILE.put(RunModeType.LOCAL, LocalMobileDriverImpl::new);
         MOBILE.put(RunModeType.REMOTE, RemoteMobileDriverImpl::new);
     }
