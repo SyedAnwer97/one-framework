@@ -3,6 +3,8 @@ package com.framework;
 import com.google.common.util.concurrent.Uninterruptibles;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
+
 public class DemoTest extends WebBase {
 
 

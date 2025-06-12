@@ -13,10 +13,18 @@ import java.net.URL;
 @Config.Sources({
         "system:properties",
         "system:env",
-        "file:${user.dir}/src/test/resources/config.properties"
+        "file:${user.dir}/src/test/resources/config.properties",
+        "file:${user.dir}/src/test/resources/staging.properties",
+        "file:${user.dir}/src/test/resources/dev.properties"
 })
 
 public interface FrameworkConfig extends Config {
+
+    @DefaultValue("dev")
+    String environment();
+
+    @Key("${environment}.webUrl")
+    String webUrl();
 
     @DefaultValue("CHROME")
     @ConverterClass(StringToBrowserConverter.class)

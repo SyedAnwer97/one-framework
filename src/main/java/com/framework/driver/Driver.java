@@ -22,7 +22,11 @@ public final class Driver {
             WebDriver driver = DriverFactory.getDriverForWeb(getConfig().browserRunMode()).getDriver(driverData);
             DriverManager.setDriver(driver);
         }
-        DriverManager.getDriver().get("https://www.google.co.in/");
+        loadURL();
+    }
+
+    private static void loadURL() {
+        DriverManager.getDriver().get(getConfig().webUrl());
         DriverManager.getDriver().manage().window().maximize();
     }
 

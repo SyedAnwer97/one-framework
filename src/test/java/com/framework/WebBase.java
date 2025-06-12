@@ -8,7 +8,7 @@ public class WebBase {
 
     @BeforeMethod
     public void setUp() {
-        Driver.initDriverForMobile();
+        Driver.initDriverForWeb();
     }
 
     @AfterMethod
