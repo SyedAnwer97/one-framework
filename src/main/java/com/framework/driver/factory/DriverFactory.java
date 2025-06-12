@@ -1,29 +1,32 @@
 package com.framework.driver.factory;
 
-import com.framework.driver.LocalMobileDriverImpl;
-import com.framework.driver.LocalWebDriverImpl;
-import com.framework.driver.RemoteMobileDriverImpl;
-import com.framework.driver.RemoteWebDriverImpl;
-import com.framework.driver.entity.MobileDriverData;
-import com.framework.driver.entity.WebDriverData;
+import com.framework.driver.*;
 import com.framework.enums.RunModeType;
-import org.openqa.selenium.WebDriver;
+
+import java.util.EnumMap;
+import java.util.Map;
+import java.util.function.Supplier;
 
 public final class DriverFactory {
 
     private DriverFactory() {
     }
 
-    public static WebDriver getDriverForWeb(WebDriverData webDriverData) {
-        return webDriverData.getRunModeType() == RunModeType.LOCAL
-                ? new LocalWebDriverImpl().getDriver(webDriverData)
-                : new RemoteWebDriverImpl().getDriver(webDriverData);
+    private static final Map<RunModeType, Supplier<IWebDriver>> WEB = new EnumMap<>(RunModeType.class);
+    private static final Map<RunModeType, Supplier<IMobileDriver>> MOBILE = new EnumMap<>(RunModeType.class);
+
+    static {
+        WEB.put(RunModeType.LOCAL, LocalWebDriverImpl::new);
+        WEB.put(RunModeType.REMOTE, RemoteWebDriverImpl::new);
+        MOBILE.put(RunModeType.LOCAL, LocalMobileDriverImpl::new);
+        MOBILE.put(RunModeType.REMOTE, RemoteMobileDriverImpl::new);
     }
 
-    public static WebDriver getDriverForAndroid(MobileDriverData mobileDriverData) {
-        return mobileDriverData.getRunModeType() == RunModeType.LOCAL
-                ? new LocalMobileDriverImpl().getDriver(mobileDriverData)
-                : new RemoteMobileDriverImpl().getDriver(mobileDriverData);
+    public static IWebDriver getDriverForWeb(RunModeType runModeType) {
+        return WEB.get(runModeType).get();
+    }
 
+    public static IMobileDriver getDriverForAndroid(RunModeType runModeType) {
+        return MOBILE.get(runModeType).get();
     }
 }
