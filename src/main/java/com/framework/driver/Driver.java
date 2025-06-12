@@ -13,29 +13,22 @@ public final class Driver {
     private Driver() {
     }
 
-    private static WebDriver driver = null;
 
     public static void initDriverForWeb() {
-        WebDriverData driverData = WebDriverData.builder().
-                browserType(getConfig().browser())
-                .browserRemoteModeType(getConfig().browserRemoteMode())
-                .runModeType(getConfig().browserRunMode())
-                .build();
-        driver = DriverFactory.getDriverForWeb(driverData);
-        driver.get("https://www.google.co.in/");
-        driver.manage().window().maximize();
+        WebDriverData driverData = new WebDriverData(getConfig().browser(), getConfig().browserRemoteMode());
+        WebDriver driver = DriverFactory.getDriverForWeb(getConfig().browserRunMode()).getDriver(driverData);
+        DriverManager.setDriver(driver);
+        DriverManager.getDriver().get("https://www.google.co.in/");
+        DriverManager.getDriver().manage().window().maximize();
     }
 
     public static void initDriverForMobile() {
-        MobileDriverData driverData = MobileDriverData.builder()
-                .mobilePlatformType(MobilePlatformType.ANDROID)
-                .mobileRemoteModeType(getConfig().mobileRemoteMode())
-                .runModeType(getConfig().runModeMobile())
-                .build();
-        driver = DriverFactory.getDriverForAndroid(driverData);
+        MobileDriverData driverData = new MobileDriverData(MobilePlatformType.ANDROID, getConfig().mobileRemoteMode());
+        WebDriver driver = DriverFactory.getDriverForAndroid(getConfig().runModeMobile()).getDriver(driverData);
+        DriverManager.setDriver(driver);
     }
 
     public static void quitDriver() {
-        driver.quit();
+        DriverManager.getDriver().quit();
     }
 }
