@@ -1,4 +1,4 @@
-package com.framework.config;
+package com.framework.config.interfaces;
 
 import com.framework.config.converters.StringToURLConverter;
 import org.aeonbits.owner.Config;

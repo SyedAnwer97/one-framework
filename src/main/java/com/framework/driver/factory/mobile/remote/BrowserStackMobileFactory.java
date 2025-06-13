@@ -2,7 +2,7 @@ package com.framework.driver.factory.mobile.remote;
 
 import com.framework.driver.managers.mobile.remote.BrowserStackAndroidManager;
 import com.framework.driver.managers.mobile.remote.BrowserStackIosManager;
-import com.framework.enums.MobilePlatformType;
+import com.framework.enums.web.MobilePlatformType;
 import org.openqa.selenium.WebDriver;
 
 import java.util.EnumMap;

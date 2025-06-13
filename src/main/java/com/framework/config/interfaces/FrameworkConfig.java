@@ -1,10 +1,10 @@
-package com.framework.config;
+package com.framework.config.interfaces;
 
 import com.framework.config.converters.*;
-import com.framework.enums.BrowserRemoteModeType;
-import com.framework.enums.BrowserType;
-import com.framework.enums.MobileRemoteModeType;
-import com.framework.enums.RunModeType;
+import com.framework.enums.mobile.BrowserRemoteModeType;
+import com.framework.enums.mobile.BrowserType;
+import com.framework.enums.web.MobileRemoteModeType;
+import com.framework.enums.framework.RunModeType;
 import org.aeonbits.owner.Config;
 
 import java.net.URL;

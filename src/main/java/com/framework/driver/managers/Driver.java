@@ -1,9 +1,9 @@
-package com.framework.driver;
+package com.framework.driver.managers;
 
 import com.framework.driver.entity.MobileDriverData;
 import com.framework.driver.entity.WebDriverData;
 import com.framework.driver.factory.DriverFactory;
-import com.framework.enums.MobilePlatformType;
+import com.framework.enums.web.MobilePlatformType;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Objects;

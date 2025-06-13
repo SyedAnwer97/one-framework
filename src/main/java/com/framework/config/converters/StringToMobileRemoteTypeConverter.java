@@ -1,6 +1,6 @@
 package com.framework.config.converters;
 
-import com.framework.enums.MobileRemoteModeType;
+import com.framework.enums.web.MobileRemoteModeType;
 import org.aeonbits.owner.Converter;
 
 import java.lang.reflect.Method;

@@ -1,6 +1,6 @@
-package com.framework.driver;
+package com.framework.driver.managers;
 
-import com.framework.enums.Platform;
+import com.framework.enums.framework.Platform;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.WebDriver;

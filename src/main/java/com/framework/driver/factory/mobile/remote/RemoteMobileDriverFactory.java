@@ -1,7 +1,7 @@
 package com.framework.driver.factory.mobile.remote;
 
-import com.framework.enums.MobilePlatformType;
-import com.framework.enums.MobileRemoteModeType;
+import com.framework.enums.web.MobilePlatformType;
+import com.framework.enums.web.MobileRemoteModeType;
 import org.openqa.selenium.WebDriver;
 
 import java.util.EnumMap;

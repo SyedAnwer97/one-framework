@@ -1,4 +1,4 @@
-package com.framework.driver;
+package com.framework.driver.interfaces;
 
 import com.framework.driver.entity.WebDriverData;
 import org.openqa.selenium.WebDriver;

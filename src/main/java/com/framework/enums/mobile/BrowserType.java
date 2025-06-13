@@ -1,4 +1,4 @@
-package com.framework.enums;
+package com.framework.enums.mobile;
 
 public enum BrowserType {
     CHROME,

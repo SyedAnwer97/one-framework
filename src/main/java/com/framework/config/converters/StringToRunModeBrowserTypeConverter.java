@@ -1,6 +1,6 @@
 package com.framework.config.converters;
 
-import com.framework.enums.RunModeType;
+import com.framework.enums.framework.RunModeType;
 import org.aeonbits.owner.Converter;
 
 import java.lang.reflect.Method;

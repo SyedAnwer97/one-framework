@@ -1,7 +1,7 @@
 package com.framework.driver.factory.web.remote;
 
-import com.framework.enums.BrowserRemoteModeType;
-import com.framework.enums.BrowserType;
+import com.framework.enums.mobile.BrowserRemoteModeType;
+import com.framework.enums.mobile.BrowserType;
 import org.openqa.selenium.WebDriver;
 
 import java.util.EnumMap;

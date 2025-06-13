@@ -1,4 +1,4 @@
-package com.framework.enums;
+package com.framework.enums.web;
 
 public enum MobileRemoteModeType {
 
