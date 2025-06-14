@@ -1,4 +1,4 @@
-package com.framework;
+package com.framework.webtest;
 
 import com.framework.driver.managers.Driver;
 import org.testng.annotations.AfterMethod;
