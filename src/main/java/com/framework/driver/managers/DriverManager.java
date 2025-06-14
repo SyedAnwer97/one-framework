@@ -23,7 +23,7 @@ public final class DriverManager {
     public static void setDriver(WebDriver driver) {
         if (isMobileDriver(driver)) {
             MOBILE_DRIVER_THREAT_LOCAL.set(driver);
-            CONTEXT.set(Platform.WEB);
+            CONTEXT.set(Platform.MOBILE);
             DRIVER_MAP.put(Platform.MOBILE, MOBILE_DRIVER_THREAT_LOCAL);
         } else {
             WEB_DRIVER_THREAD_LOCAL.set(driver);
