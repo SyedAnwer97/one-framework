@@ -1,7 +1,7 @@
 package com.framework.driver.entity;
 
-import com.framework.enums.MobilePlatformType;
-import com.framework.enums.MobileRemoteModeType;
+import com.framework.enums.web.MobilePlatformType;
+import com.framework.enums.web.MobileRemoteModeType;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

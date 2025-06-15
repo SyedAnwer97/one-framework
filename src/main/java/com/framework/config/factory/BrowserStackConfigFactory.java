@@ -1,6 +1,6 @@
 package com.framework.config.factory;
 
-import com.framework.config.BrowserStackConfig;
+import com.framework.config.interfaces.BrowserStackConfig;
 import org.aeonbits.owner.ConfigCache;
 
 public final class BrowserStackConfigFactory {

@@ -1,7 +1,12 @@
 package com.framework.driver.factory;
 
-import com.framework.driver.*;
-import com.framework.enums.RunModeType;
+import com.framework.driver.interfaces.IMobileDriver;
+import com.framework.driver.interfaces.IWebDriver;
+import com.framework.driver.impl.mobile.LocalMobileDriverImpl;
+import com.framework.driver.impl.mobile.RemoteMobileDriverImpl;
+import com.framework.driver.impl.web.LocalWebDriverImpl;
+import com.framework.driver.impl.web.RemoteWebDriverImpl;
+import com.framework.enums.framework.RunModeType;
 
 import java.util.EnumMap;
 import java.util.Map;

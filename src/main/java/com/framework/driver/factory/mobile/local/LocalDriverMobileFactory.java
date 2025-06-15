@@ -2,7 +2,7 @@ package com.framework.driver.factory.mobile.local;
 
 import com.framework.driver.managers.mobile.local.AndroidManager;
 import com.framework.driver.managers.mobile.local.IosManager;
-import com.framework.enums.MobilePlatformType;
+import com.framework.enums.web.MobilePlatformType;
 import org.openqa.selenium.WebDriver;
 
 import java.util.EnumMap;

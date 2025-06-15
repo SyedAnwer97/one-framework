@@ -2,7 +2,7 @@ package com.framework.driver.factory.web.remote;
 
 import com.framework.driver.managers.web.remote.selenoid.SelenoidChromeManager;
 import com.framework.driver.managers.web.remote.selenoid.SelenoidFirefoxManager;
-import com.framework.enums.BrowserType;
+import com.framework.enums.mobile.BrowserType;
 import org.openqa.selenium.WebDriver;
 
 import java.util.EnumMap;
