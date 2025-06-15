@@ -24,7 +24,7 @@ public class LoginPage extends SeleniumPageActions {
     }
 
     public HomePage userLogin(String username, String password) {
-        new LoginPage().setUserName(username).setPassword(password).clickLogin();
+        setUserName(username).setPassword(password).clickLogin();
         return new HomePage();
     }
 }
